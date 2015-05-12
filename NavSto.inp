@@ -1,0 +1,30 @@
+ # INPUT FILE FOR INCOMPRESSIBLE NAVIER-STOKES SOLVER
+ !---------------------------------------------------!
+	XMIN		XMAX		YMIN		YMAX
+	0.0	 		1.0	 		0.0	 		1.0
+	NGX		NGY		GEN_OPT
+	21		21		  0
+	#TIME PARAMETERS
+	TMIN	TMAX	  DT		NTEC
+	0.0		2.0		1.0E-3		50
+	#SOLVER PARAMETERS
+	iPROBLEM	iRESTART	NREAD	iINTLBODY    iCDCL
+        1          0	      1        0           0
+	SOL_METHOD		TIME_SCHEME
+		2				1
+	#BOUNDARY CONDITIONS
+	Xmin	Xmax	Ymin	Ymax
+	4		4		4		4
+	Val1	Val2	Val3	Val4
+	0		0		0		0
+	#COMUPTATION PARAMETERS
+	Resdiual monitor Var_ex
+		1e-3			3
+	#PARAMETERS FOR SUCCESSIVE OVER-RELAXATION
+		omega
+		1.8	
+	#TESTING PARAMETERS
+		iVerbose
+		0
+	
+  
